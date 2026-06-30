@@ -112,8 +112,24 @@
       <!-- Floating collar render -->
       <div id="hero-render" class="reveal relative mt-16 w-full max-w-3xl will-change-transform">
         <div class="absolute inset-x-10 bottom-2 h-12 rounded-[50%] bg-black/15 blur-2xl"></div>
-        <div class="relative flex aspect-[16/10] items-center justify-center rounded-3xl border border-neutral-200 bg-gradient-to-b from-neutral-50 to-neutral-100">
-          <span class="select-none text-sm font-medium tracking-wide text-neutral-400">[FILL: product render — collar floating]</span>
+        <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-3xl border border-neutral-200 bg-gradient-to-b from-neutral-50 to-neutral-100">
+          <span class="absolute left-4 top-4 select-none rounded-full border border-neutral-300 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-neutral-400">Placeholder render</span>
+          <!-- TODO: replace placeholder SVG with product photography -->
+          <svg role="img" aria-label="Rora smart collar, floating product render placeholder" viewBox="0 0 600 380" class="h-[80%] w-auto">
+            <defs>
+              <linearGradient id="roraBand" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#d6d6d6" /><stop offset="1" stop-color="#8a8a8a" />
+              </linearGradient>
+              <linearGradient id="roraPuck" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2c2c2c" /><stop offset="1" stop-color="#0a0a0a" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="300" cy="172" rx="216" ry="116" fill="none" stroke="url(#roraBand)" stroke-width="36" />
+            <ellipse cx="300" cy="172" rx="216" ry="116" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2" />
+            <rect x="246" y="226" width="108" height="96" rx="28" fill="url(#roraPuck)" />
+            <circle cx="300" cy="274" r="27" fill="#171717" />
+            <circle cx="300" cy="274" r="13" fill="#262626" />
+          </svg>
         </div>
       </div>
     </section>
@@ -123,7 +139,24 @@
       <div class="mx-auto grid max-w-[1200px] items-center gap-16 md:grid-cols-2">
         <div class="reveal order-2 md:order-1">
           <div class="relative flex aspect-square items-center justify-center overflow-hidden rounded-3xl bg-neutral-100">
-            <span class="select-none text-sm font-medium text-neutral-400">[FILL: macro shot — sensor side of collar]</span>
+            <span class="absolute left-4 top-4 select-none rounded-full border border-neutral-300 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-neutral-400">Placeholder render</span>
+            <!-- TODO: replace placeholder SVG with macro product photography -->
+            <svg role="img" aria-label="Sensor side of the Rora collar, macro placeholder" viewBox="0 0 400 400" class="h-[74%] w-auto">
+              <defs>
+                <radialGradient id="sensorGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#3a3a3a" /><stop offset="1" stop-color="#141414" />
+                </radialGradient>
+              </defs>
+              <rect x="70" y="96" width="260" height="208" rx="48" fill="#1b1b1b" />
+              <rect x="70" y="96" width="260" height="208" rx="48" fill="none" stroke="#000" stroke-opacity="0.35" stroke-width="2" />
+              <circle cx="200" cy="196" r="58" fill="url(#sensorGlow)" />
+              <circle cx="200" cy="196" r="42" fill="#0e0e0e" />
+              <circle cx="200" cy="196" r="20" fill="#242424" />
+              <circle cx="200" cy="196" r="6" fill="#3d3d3d" />
+              <circle cx="158" cy="154" r="5" fill="#2a2a2a" /><circle cx="242" cy="154" r="5" fill="#2a2a2a" />
+              <circle cx="158" cy="238" r="5" fill="#2a2a2a" /><circle cx="242" cy="238" r="5" fill="#2a2a2a" />
+              <rect x="150" y="282" width="100" height="9" rx="4.5" fill="#3a3a3a" />
+            </svg>
           </div>
         </div>
         <div class="reveal order-1 md:order-2">
@@ -182,7 +215,7 @@
               <span class="geo-pulse delay absolute h-16 w-16 rounded-full bg-teal-300/40"></span>
               <span class="relative h-3 w-3 rounded-full bg-teal-300 shadow-[0_0_18px_4px_rgba(94,234,212,0.7)]"></span>
             </div>
-            <span class="absolute bottom-5 select-none text-xs font-medium text-white/30">[FILL: live map illustration]</span>
+            <span class="absolute bottom-5 select-none text-xs font-medium uppercase tracking-[0.18em] text-white/30">Live location</span>
           </div>
         </div>
       </div>
@@ -215,8 +248,17 @@
 
         <div class="mt-16 grid gap-8 md:grid-cols-3">
           <figure class="reveal">
-            <div class="flex aspect-[4/5] items-center justify-center rounded-3xl bg-neutral-100">
-              <span class="select-none text-sm font-medium text-neutral-400">[FILL: band texture]</span>
+            <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-neutral-100">
+              <span class="absolute left-4 top-4 z-10 select-none rounded-full border border-white/25 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-white/50">Placeholder</span>
+              <!-- TODO: replace with band-texture macro photography -->
+              <svg role="img" aria-label="Collar band texture, macro placeholder" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice" class="h-full w-full">
+                <defs>
+                  <pattern id="rib" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                    <rect width="24" height="24" fill="#1f1f1f" /><rect width="12" height="24" fill="#151515" />
+                  </pattern>
+                </defs>
+                <rect width="300" height="375" fill="url(#rib)" />
+              </svg>
             </div>
             <figcaption class="mt-5">
               <h3 class="text-lg font-semibold">Water resistant.</h3>
@@ -224,8 +266,14 @@
             </figcaption>
           </figure>
           <figure class="reveal">
-            <div class="flex aspect-[4/5] items-center justify-center rounded-3xl bg-neutral-100">
-              <span class="select-none text-sm font-medium text-neutral-400">[FILL: charging contact]</span>
+            <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-neutral-100">
+              <span class="absolute left-4 top-4 z-10 select-none rounded-full border border-white/25 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-white/50">Placeholder</span>
+              <!-- TODO: replace with charging-contact macro photography -->
+              <svg role="img" aria-label="Charging contacts, macro placeholder" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice" class="h-full w-full">
+                <rect width="300" height="375" fill="#171717" />
+                <circle cx="116" cy="188" r="22" fill="#383838" /><circle cx="116" cy="188" r="11" fill="#5c5c5c" />
+                <circle cx="184" cy="188" r="22" fill="#383838" /><circle cx="184" cy="188" r="11" fill="#5c5c5c" />
+              </svg>
             </div>
             <figcaption class="mt-5">
               <h3 class="text-lg font-semibold">Days, not hours.</h3>
@@ -233,8 +281,18 @@
             </figcaption>
           </figure>
           <figure class="reveal">
-            <div class="flex aspect-[4/5] items-center justify-center rounded-3xl bg-neutral-100">
-              <span class="select-none text-sm font-medium text-neutral-400">[FILL: indicator light]</span>
+            <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-neutral-100">
+              <span class="absolute left-4 top-4 z-10 select-none rounded-full border border-white/25 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-white/50">Placeholder</span>
+              <!-- TODO: replace with indicator-light macro photography -->
+              <svg role="img" aria-label="Indicator light, macro placeholder" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice" class="h-full w-full">
+                <defs>
+                  <radialGradient id="led" cx="50%" cy="50%" r="50%">
+                    <stop offset="0" stop-color="#f5f5f5" /><stop offset="0.45" stop-color="#b8b8b8" /><stop offset="1" stop-color="#171717" />
+                  </radialGradient>
+                </defs>
+                <rect width="300" height="375" fill="#171717" />
+                <circle cx="150" cy="188" r="48" fill="url(#led)" />
+              </svg>
             </div>
             <figcaption class="mt-5">
               <h3 class="text-lg font-semibold">Light as instinct.</h3>
@@ -271,6 +329,89 @@
             <dt class="text-white/50">Sizes</dt><dd class="font-medium">S / M / L</dd>
           </div>
         </dl>
+      </div>
+    </section>
+
+    <!-- ============================ COMPARISON ============================ -->
+    <section id="compare" class="bg-white px-6 py-[120px]">
+      <div class="mx-auto max-w-[1000px]">
+        <div class="reveal max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-neutral-400">The difference</p>
+          <h2 class="mt-4 text-[clamp(2.25rem,5vw,3.5rem)] font-bold leading-[1.02] tracking-tightest">
+            Most collars stop at the fence.
+          </h2>
+          <p class="mt-6 text-lg leading-relaxed text-neutral-500">
+            GPS tells you where. A fence tells you when. Rora is the only collar that
+            also reads how your dog is — and lets you step in, gently, from anywhere.
+          </p>
+        </div>
+
+        <div class="reveal mt-14 overflow-x-auto">
+          <table class="w-full min-w-[640px] border-separate border-spacing-0 text-left">
+            <caption class="sr-only">How Rora compares with other categories of dog collar</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="w-[34%] pb-5 pr-4 align-bottom"></th>
+                <th scope="col" class="px-3 pb-5 text-center align-bottom text-sm font-semibold text-neutral-500">GPS trackers</th>
+                <th scope="col" class="px-3 pb-5 text-center align-bottom text-sm font-semibold text-neutral-500">Virtual fences</th>
+                <th scope="col" class="px-3 pb-5 text-center align-bottom text-sm font-semibold text-neutral-500">Health monitors</th>
+                <th scope="col" class="rounded-t-2xl bg-[rgba(120,130,230,0.08)] px-3 pb-5 pt-5 text-center align-bottom text-base font-bold">
+                  <span class="bg-aura-accent bg-clip-text text-transparent">Rora</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="border-t border-neutral-200 py-5 pr-4 font-medium text-neutral-800">Live GPS tracking</th>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-neutral-900"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-neutral-900"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="bg-[rgba(120,130,230,0.08)] px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-teal-600"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row" class="border-t border-neutral-200 py-5 pr-4 font-medium text-neutral-800">Geofence / virtual fence</th>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-neutral-900"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-neutral-900"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="bg-[rgba(120,130,230,0.08)] px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-teal-600"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row" class="border-t border-neutral-200 py-5 pr-4 font-medium text-neutral-800">Activity &amp; sleep tracking</th>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-neutral-900"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-neutral-900"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+                <td class="bg-[rgba(120,130,230,0.08)] px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-teal-600"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row" class="border-t border-neutral-200 py-5 pr-4 font-medium text-neutral-800">Continuous vital signs</th>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-neutral-900"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+                <td class="bg-[rgba(120,130,230,0.08)] px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-teal-600"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row" class="border-t border-neutral-200 py-5 pr-4 font-medium text-neutral-800">AI wellbeing baseline</th>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="bg-[rgba(120,130,230,0.08)] px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-teal-600"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row" class="border-t border-neutral-200 py-5 pr-4 font-medium text-neutral-800">Humane remote intervention</th>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="text-[11px] font-semibold uppercase tracking-wide text-neutral-400">Static shock</span></td>
+                <td class="border-t border-neutral-200 px-3 py-5 text-center"><span class="sr-only">Not included</span><span aria-hidden="true" class="mx-auto block h-0.5 w-4 rounded bg-neutral-300"></span></td>
+                <td class="rounded-b-2xl bg-[rgba(120,130,230,0.08)] px-3 py-5 text-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="mx-auto h-5 w-5 text-teal-600"><path d="M4 12.5l5 5L20 6" /></svg><span class="sr-only">Included</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="reveal mt-7 max-w-3xl text-xs leading-relaxed text-neutral-400">
+          Categories reflect collars on the market today — GPS trackers (e.g. Fi, Tractive, Whistle),
+          virtual fences (e.g. Halo, SpotOn) and health monitors (e.g. PetPace, Invoxia). Each does part
+          of the job well. Rora is built to do all of it — and to act, not just alert — without static shock.
+        </p>
       </div>
     </section>
 

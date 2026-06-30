@@ -42,7 +42,11 @@ npm run watch:css    # rebuild on change
 ## Sections
 
 Sticky nav · Hero · Health · Safety/GPS · Aura intelligence · Design & materials ·
-Tech specs · Pre-order tiers · Waitlist · FAQ · Footer.
+Tech specs · Comparison ("The difference") · Pre-order tiers · Waitlist · FAQ · Footer.
+
+Placeholder product imagery is drawn as self-contained inline SVG (monochrome,
+on-brand) and tagged "Placeholder" — search `index.html` for `TODO: replace`
+to find each spot for real photography.
 
 ## Customizing
 

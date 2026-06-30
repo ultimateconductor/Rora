@@ -41,8 +41,9 @@ npm run watch:css    # rebuild on change
 
 ## Sections
 
-Sticky nav · Hero · Health · Safety/GPS · Aura intelligence · Design & materials ·
-Tech specs · Comparison ("The difference") · Pre-order tiers · Waitlist · FAQ · Footer.
+Sticky nav · Hero · Health · Safety/GPS · Camera (live view) · Aura intelligence ·
+Design & materials · Tech specs · Comparison ("The difference") · Pre-order tiers ·
+Waitlist · FAQ · Footer.
 
 Placeholder product imagery is drawn as self-contained inline SVG (monochrome,
 on-brand) and tagged "Placeholder" — search `index.html` for `TODO: replace`

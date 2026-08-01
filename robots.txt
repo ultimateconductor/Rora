@@ -1,0 +1,7 @@
+# Pre-launch configuration.
+# Crawling is intentionally ALLOWED so search engines can see the
+# <meta name="robots" content="noindex"> tag in index.html and honor it.
+# (A Disallow here would hide that tag and the URL could still get indexed.)
+# At launch: remove the noindex meta tag in index.html; this file can stay.
+User-agent: *
+Allow: /

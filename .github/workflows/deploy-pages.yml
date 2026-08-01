@@ -1,10 +1,11 @@
 name: Deploy to GitHub Pages
 
 # Builds the CSS from source and publishes the static site to GitHub Pages.
-# Runs on every push to main, and can be triggered manually from the Actions tab.
+# Currently deploys from the feature branch so the site can be previewed live
+# before merging to main. Change the branch below to `main` once merged.
 on:
   push:
-    branches: [main]
+    branches: [claude/project-setup-ideas-4rywe9]
   workflow_dispatch:
 
 # Permissions the deploy needs.

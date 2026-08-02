@@ -1,0 +1,24 @@
+# Netlify build configuration.
+# Only the files listed in the publish directory are served — the archive/
+# folder and repo history are never exposed by the site.
+
+[build]
+  command = "npm run build:css && mkdir -p _site && cp index.html styles.css robots.txt _site/"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Send www to the apex domain.
+[[redirects]]
+  from = "https://www.roracollar.io/*"
+  to = "https://roracollar.io/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

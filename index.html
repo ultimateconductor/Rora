@@ -4,6 +4,7 @@
 <meta name="description" content="Rora. Let them roam. Keep them close." />
 <!-- PRE-LAUNCH: keeps the placeholder site out of search results. REMOVE this tag at launch. -->
 <meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#FDF6F1" />
 
 <link rel="stylesheet" href="./styles.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,34 +31,34 @@
   }
 </style>
 
-<main class="flex min-h-screen flex-col items-center justify-center bg-white px-6 py-16 text-center font-sans text-ink antialiased selection:bg-black selection:text-white">
+<main class="flex min-h-screen flex-col items-center justify-center bg-cream px-6 py-16 text-center font-sans text-charcoal antialiased selection:bg-ember selection:text-white">
 
-  <h1 class="fade-up text-xl font-semibold tracking-tightest">Rora</h1>
+  <h1 class="fade-up text-[clamp(1.9rem,4.2vw,2.75rem)] font-bold tracking-tightest text-ember">Rora</h1>
 
-  <p class="fade-up d1 mt-16 max-w-2xl text-[clamp(2.25rem,7vw,4.25rem)] font-bold leading-[1.03] tracking-tightest">
+  <p class="fade-up d1 mt-14 max-w-xl text-[clamp(1.875rem,5vw,3rem)] font-bold leading-[1.06] tracking-tightest">
     Let them roam.<br />Keep them close.
   </p>
 
-  <p class="fade-up d2 mt-8 max-w-sm text-lg leading-relaxed text-neutral-500">
+  <p class="fade-up d2 mt-7 max-w-sm text-lg leading-relaxed text-muted">
     A smart safety collar for dogs. Arriving 2027.
   </p>
 
   <!-- Waitlist -->
-  <form id="waitlist" novalidate class="fade-up d3 mt-14 flex w-full max-w-md flex-col gap-3 sm:flex-row">
+  <form id="waitlist" novalidate class="fade-up d3 mt-12 flex w-full max-w-md flex-col gap-3 sm:flex-row">
     <label for="email" class="sr-only">Email address</label>
     <input id="email" name="email" type="email" required autocomplete="email"
            placeholder="you@example.com"
-           class="w-full rounded-full border border-neutral-300 bg-transparent px-5 py-3 text-base outline-none transition placeholder:text-neutral-400 focus:border-black" />
+           class="w-full rounded-full border border-line bg-transparent px-5 py-3 text-base text-charcoal outline-none transition placeholder:text-faint focus:border-ember" />
     <button type="submit"
-            class="shrink-0 rounded-full bg-black px-7 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800">
+            class="shrink-0 rounded-full bg-ember px-7 py-3 text-sm font-semibold text-white transition hover:bg-ember-dark">
       Notify me
     </button>
   </form>
 
-  <p id="msg" role="status" aria-live="polite" class="fade-up d3 mt-5 h-5 text-sm text-neutral-600"></p>
-  <p class="fade-up d3 -mt-1 text-xs text-neutral-400">No spam. One email when we launch.</p>
+  <p id="msg" role="status" aria-live="polite" class="fade-up d3 mt-5 h-5 text-sm text-muted"></p>
+  <p class="fade-up d3 -mt-1 text-xs text-faint">No spam. One email when we launch.</p>
 
-  <footer class="fade-up d4 mt-24 text-xs text-neutral-400">
+  <footer class="fade-up d4 mt-24 text-xs text-faint">
     &copy; 2026 Rora
   </footer>
 </main>
@@ -74,16 +75,16 @@
       var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
 
       if (!valid) {
-        msg.classList.remove('text-neutral-600');
-        msg.classList.add('text-rose-600');
+        msg.classList.remove('text-muted');
+        msg.classList.add('text-ember');
         msg.textContent = 'Please enter a valid email address.';
         email.focus();
         return;
       }
 
-      // TODO: connect to [email provider]
-      msg.classList.remove('text-rose-600');
-      msg.classList.add('text-neutral-600');
+      // TODO: connect to [email provider] — switch to Netlify Forms once migrated.
+      msg.classList.remove('text-ember');
+      msg.classList.add('text-muted');
       msg.textContent = "You're on the list. We'll be in touch.";
       form.reset();
     });

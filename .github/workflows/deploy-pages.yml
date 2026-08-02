@@ -41,6 +41,15 @@ jobs:
       - name: Build CSS
         run: npm run build:css
 
+      # Assemble only the files that should be publicly served. Anything not
+      # copied here (e.g. archive/) stays in the repo but is never published.
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp index.html styles.css robots.txt CNAME _site/
+          touch _site/.nojekyll
+          echo "Publishing:" && ls -a _site
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
@@ -50,7 +59,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy
         id: deployment

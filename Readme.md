@@ -1,63 +1,61 @@
-# Rora — Pre-order site
+# Rora — pre-launch site
 
-A single-page pre-order website for **Rora**, a smart safety collar for dogs.
-GPS tracking, geofencing, health monitoring and live 4G — backed by **Aura**,
-an AI layer that learns each dog's normal and flags when something's off.
+The live site is a deliberately minimal pre-launch page: wordmark, tagline,
+one line of description, and an email capture. Nothing about features,
+specifications, pricing or roadmap is published.
 
-> **Always knows. Always there.**
+> **Let them roam. Keep them close.**
 
-The design follows an Apple-product-page aesthetic: cinematic, calm, premium,
-motion-driven, ruthlessly minimal. Black / near-white sections alternate, with a
-single restrained aurora accent (teal → violet) reserved for the Aura and CTA moments.
+## Live
+
+- Production: https://roracollar.io
+- Deploys automatically from `claude/project-setup-ideas-4rywe9` via GitHub Actions.
 
 ## Stack
 
-- **Static HTML** (`index.html`) — no framework, no runtime dependencies.
-- **Tailwind CSS**, compiled locally to `styles.css` (no CDN at runtime).
-- **Vanilla JS** for the frosted scroll nav, hero parallax, scroll-reveal
-  animations, the FAQ accordion, and waitlist email validation.
-- Inter via Google Fonts, with a system-font fallback.
-
-## Run it
-
-Just open `index.html` in a browser — `styles.css` is already committed.
-
-For local dev with a server:
+Static HTML with Tailwind CSS compiled locally to `styles.css`, plus a small
+amount of vanilla JS for email validation. No framework, no runtime dependencies.
 
 ```bash
-python3 -m http.server 8099
-# then visit http://localhost:8099
+npm install        # first time only
+npm run build:css  # rebuild styles.css after changing classes in index.html
+npm run watch:css  # rebuild on change
+
+python3 -m http.server 8099   # preview at http://localhost:8099
 ```
 
-## Editing styles
+## What gets published
 
-If you change Tailwind classes in `index.html`, rebuild the stylesheet:
+The deploy workflow copies only these into `_site/` and publishes that:
+
+```
+index.html   styles.css   robots.txt   CNAME   .nojekyll
+```
+
+Anything else in the repo — including `archive/` — stays unpublished. If you add
+a file that should be publicly served, add it to the "Assemble site" step in
+`.github/workflows/deploy-pages.yml`.
+
+## Version history
+
+`archive/v1-full-site.html` is the full marketing site (hero, activity, safety,
+camera, Aura, design, specs, comparison table, deposit, FAQ). It is self-contained
+— open it directly in a browser to view it, or restore it with:
 
 ```bash
-npm install          # first time only
-npm run build:css    # one-off build
-npm run watch:css    # rebuild on change
+cp archive/v1-full-site.html index.html && npm run build:css
 ```
 
-## Sections
+It is kept for reference and is not served publicly.
 
-Sticky nav · Hero · Health · Safety/GPS · Camera (live view) · Aura intelligence ·
-Design & materials · Tech specs · Comparison ("The difference") · Pre-order tiers ·
-Waitlist · FAQ · Footer.
+## Before launch
 
-Placeholder product imagery is drawn as self-contained inline SVG (monochrome,
-on-brand) and tagged "Placeholder" — search `index.html` for `TODO: replace`
-to find each spot for real photography.
+- Remove the `noindex` meta tag from `index.html` so search engines can index the site.
+- Connect the email form — see the `// TODO: connect to [email provider]` comment.
 
-## Customizing
+## Claims discipline
 
-- Search `index.html` for `[FILL: ...]` placeholders (price, deposit, battery,
-  weight, ship date, product imagery) and replace with real values/assets.
-- Forms are front-end only. Look for the `// TODO: connect to ...` comment in the
-  waitlist handler to wire up an email provider / Stripe.
-
-## Accessibility & motion
-
-Semantic HTML, keyboard-navigable accordion (native `<button>`s), `aria-live`
-form status, and full `prefers-reduced-motion` support (reveals, parallax, and
-the animated aurora all disable for users who opt out).
+Anything published must map to a capability confirmed in writing by the hardware
+supplier. See `CLAUDE.md` for the confirmed capability list. The v1 archive was
+revised once to remove claims (heart rate, sleep quality, autonomous hazard
+detection) the platform does not support — do not reintroduce them.

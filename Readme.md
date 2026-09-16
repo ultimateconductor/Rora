@@ -48,10 +48,31 @@ cp archive/v1-full-site.html index.html && npm run build:css
 
 It is kept for reference and is not served publicly.
 
+## Waitlist submissions
+
+The form posts to **Netlify Forms** — no backend required. Submissions appear under
+**Netlify → Forms → `waitlist`**, and can be exported as CSV or piped to a webhook.
+
+Fields captured:
+
+| Field | Purpose |
+| --- | --- |
+| `email` | required; the signup itself |
+| `breed` | optional; beta cohort selection |
+| `size` | optional; Small / Medium / Large / Not sure — first-run sizing mix |
+
+Netlify detects the form by parsing the deployed HTML, so the `data-netlify="true"`
+attribute, the hidden `form-name` input and the `bot-field` honeypot must all stay on
+the form. Renaming the form means re-pointing the hidden `form-name` value too.
+
+Submissions only work on Netlify. Posting from a local preview will fail — that is
+expected, not a bug.
+
 ## Before launch
 
 - Remove the `noindex` meta tag from `index.html` so search engines can index the site.
-- Connect the email form — see the `// TODO: connect to [email provider]` comment.
+- Set up a notification for new submissions (Netlify → Forms → Settings) so signups
+  do not sit unread.
 
 ## Claims discipline
 

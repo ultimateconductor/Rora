@@ -35,46 +35,60 @@
 
   <h1 class="fade-up text-[clamp(1.9rem,4.2vw,2.75rem)] font-bold tracking-tightest text-ember">Rora</h1>
 
-  <p class="fade-up d1 mt-14 max-w-xl text-[clamp(1.875rem,5vw,3rem)] font-bold leading-[1.06] tracking-tightest">
+  <p class="fade-up d1 mt-12 max-w-xl text-[clamp(1.875rem,5vw,3rem)] font-bold leading-[1.06] tracking-tightest">
     Let them roam.<br />Keep them close.
   </p>
 
-  <p class="fade-up d2 mt-7 max-w-sm text-lg leading-relaxed text-muted">
-    A smart safety collar for dogs. Arriving mid 2027.
+  <p class="fade-up d2 mt-6 max-w-md text-lg leading-relaxed text-muted">
+    A smart safety collar for dogs, learning to spot what's off. Arriving mid 2027.
   </p>
 
-  <!-- Waitlist. Submissions are collected by Netlify Forms; see the dashboard. -->
+  <!-- TODO: replace this illustration with photography of the real collar. -->
+  <div class="fade-up d2 mt-10 w-full max-w-[16rem]">
+    <svg viewBox="0 0 400 270" role="img" aria-label="Illustration of the Rora collar" class="h-auto w-full">
+      <defs>
+        <linearGradient id="band" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#E9DCD2" />
+          <stop offset="1" stop-color="#BCA79A" />
+        </linearGradient>
+        <linearGradient id="puck" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3A322D" />
+          <stop offset="1" stop-color="#1A1411" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="200" cy="243" rx="104" ry="11" fill="#1A1411" opacity="0.06" />
+      <ellipse cx="200" cy="118" rx="142" ry="80" fill="none" stroke="url(#band)" stroke-width="26" />
+      <ellipse cx="200" cy="118" rx="142" ry="80" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5" />
+      <rect x="161" y="152" width="78" height="70" rx="22" fill="url(#puck)" />
+      <circle cx="200" cy="187" r="15" fill="#0E0B09" />
+      <circle cx="200" cy="187" r="6" fill="#D94A16" />
+    </svg>
+  </div>
+
+  <!-- Waitlist. Submissions are collected by Netlify Forms; see the dashboard.
+       Field order matters: the dog fields sit ABOVE the submit button, because
+       anything below the CTA is never seen by people who just sign up. -->
   <form id="waitlist" name="waitlist" method="POST" data-netlify="true"
         netlify-honeypot="bot-field" novalidate
-        class="fade-up d3 mt-12 w-full max-w-md">
+        class="fade-up d3 mt-10 w-full max-w-md">
 
     <input type="hidden" name="form-name" value="waitlist" />
     <p class="hidden"><label>Leave this field empty <input name="bot-field" /></label></p>
 
-    <div class="flex flex-col gap-3 sm:flex-row">
-      <label for="email" class="sr-only">Email address</label>
-      <input id="email" name="email" type="email" required autocomplete="email"
-             placeholder="you@example.com"
-             class="w-full rounded-full border border-line bg-transparent px-5 py-3 text-base text-charcoal outline-none transition placeholder:text-faint focus:border-ember" />
-      <button type="submit"
-              class="shrink-0 rounded-full bg-ember px-7 py-3 text-sm font-semibold text-white transition hover:bg-ember-dark disabled:opacity-60">
-        Notify me
-      </button>
-    </div>
+    <label for="email" class="sr-only">Email address</label>
+    <input id="email" name="email" type="email" required autocomplete="email"
+           placeholder="you@example.com"
+           class="w-full rounded-full border border-line bg-transparent px-5 py-3 text-base text-charcoal outline-none transition placeholder:text-faint focus:border-ember" />
 
-    <!-- Breed and size decide beta selection and first-run collar sizing. -->
-    <div class="mt-7 border-t border-line pt-6 text-left">
-      <p class="text-xs uppercase tracking-[0.18em] text-faint">
-        About your dog <span class="normal-case tracking-normal">(optional)</span>
-      </p>
-
+    <!-- Breed drives beta cohort selection; size is the first-run sizing mix. -->
+    <div class="mt-5 text-left">
       <label for="breed" class="sr-only">Breed</label>
       <input id="breed" name="breed" type="text" autocomplete="off" maxlength="60"
-             placeholder="Breed, or mix"
-             class="mt-4 w-full rounded-full border border-line bg-transparent px-5 py-2.5 text-base text-charcoal outline-none transition placeholder:text-faint focus:border-ember" />
+             placeholder="Breed, or mix (optional)"
+             class="w-full rounded-full border border-line bg-transparent px-5 py-3 text-base text-charcoal outline-none transition placeholder:text-faint focus:border-ember" />
 
-      <fieldset class="mt-3">
-        <legend class="sr-only">Collar size</legend>
+      <fieldset class="mt-5">
+        <legend class="mb-3 text-xs uppercase tracking-[0.18em] text-faint">Their size</legend>
         <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
           <label class="cursor-pointer">
             <input type="radio" name="size" value="Small" class="peer sr-only" />
@@ -95,12 +109,17 @@
         </div>
       </fieldset>
     </div>
+
+    <button type="submit"
+            class="mt-7 w-full rounded-full bg-ember px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-ember-dark disabled:opacity-60">
+      Notify me
+    </button>
   </form>
 
   <p id="msg" role="status" aria-live="polite" class="fade-up d3 mt-5 min-h-[1.25rem] text-sm text-muted"></p>
-  <p id="fineprint" class="fade-up d3 mt-1 text-xs text-faint">No spam. One email when we launch.</p>
+  <p id="fineprint" class="fade-up d3 mt-1 text-xs text-faint">No spam. Occasional build updates.</p>
 
-  <footer class="fade-up d4 mt-24 text-xs text-faint">
+  <footer class="fade-up d4 mt-20 text-xs text-faint">
     &copy; 2026 Rora
   </footer>
 </main>
@@ -126,6 +145,13 @@
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) {
         say('Please enter a valid email address.', true);
         emailEl.focus();
+        return;
+      }
+
+      var size = form.querySelector('input[name="size"]:checked');
+      if (!size) {
+        say('Please pick a size, or choose Not sure.', true);
+        form.querySelector('input[name="size"]').focus();
         return;
       }
 

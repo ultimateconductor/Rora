@@ -59,7 +59,11 @@ Fields captured:
 | --- | --- |
 | `email` | required; the signup itself |
 | `breed` | optional; beta cohort selection |
-| `size` | optional; Small / Medium / Large / Not sure — first-run sizing mix |
+| `size` | **required**; Small / Medium / Large / Not sure — first-run sizing mix |
+
+The dog fields sit **above** the submit button on purpose. Anything placed below the
+call to action is never seen by people who simply sign up, so moving them down would
+quietly cost almost all of the breed and size data.
 
 Netlify detects the form by parsing the deployed HTML, so the `data-netlify="true"`
 attribute, the hidden `form-name` input and the `bot-field` honeypot must all stay on

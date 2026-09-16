@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         ink: "#0a0a0a",
-        // Brand palette — cream ground with an ember accent.
+        // Brand palette — LOCKED, cream ground with an ember accent. See CLAUDE.md.
         cream: "#FDF6F1",
         ember: "#D94A16",
         "ember-dark": "#BE3F12",

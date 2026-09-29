@@ -8,7 +8,7 @@ CLAUDE.md and is deliberately kept out of this repo while it is public.
 
 The public pre-launch page for Rora, a smart safety collar for dogs. It is a
 deliberately minimal waitlist page: wordmark, headline, one line of description,
-a collar illustration, and a signup form. Nothing about features, specifications,
+and a signup form (no product image until real photography exists). Nothing about features, specifications,
 pricing or roadmap is published.
 
 The full v1 marketing site is archived at `archive/v1-full-site.html`. It is kept

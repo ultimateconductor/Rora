@@ -74,6 +74,8 @@ will not deliver static correction — it can, opt-in.
 ## Housekeeping
 
 - `npm run build:css` after changing any class in `index.html`.
-- Only `index.html`, `styles.css` and `robots.txt` are published; see
-  `netlify.toml` and the README.
-- The `noindex` meta tag in `index.html` must be removed at launch.
+- Only `index.html`, `styles.css`, `robots.txt` and `sitemap.xml` are published;
+  see `netlify.toml` and the README.
+- The site is open to search engines on purpose. Do not add a `noindex` tag or a
+  `Disallow` rule; keep the title, description and canonical URL in `index.html`
+  aligned with the settled copy.

@@ -29,7 +29,7 @@ python3 -m http.server 8099   # preview at http://localhost:8099
 The deploy workflow copies only these into `_site/` and publishes that:
 
 ```
-index.html   styles.css   robots.txt   CNAME   .nojekyll
+index.html   styles.css   robots.txt   sitemap.xml   CNAME   .nojekyll
 ```
 
 Anything else in the repo — including `archive/` — stays unpublished. If you add
@@ -74,7 +74,6 @@ expected, not a bug.
 
 ## Before launch
 
-- Remove the `noindex` meta tag from `index.html` so search engines can index the site.
 - Set up a notification for new submissions (Netlify → Forms → Settings) so signups
   do not sit unread.
 
